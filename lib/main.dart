@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:new_design/navigation_container.dart';
+import 'sites.dart';
 
 void main(List<String> args) {
   // take widget
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
         body: Container(
+          padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             border: Border.all(width: 2, color: Colors.black),
           ),
@@ -28,66 +31,47 @@ class MyApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const CircleAvatar(
-                  radius: 100,
+                  radius: 75,
                   backgroundImage:
                       AssetImage('assets/images/man-avatar-profile-vector.png'),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                const SizedBox(height: 10),
+                const Sites(),
+                const SizedBox(height: 20),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.transparent,
-                      backgroundImage:
-                          AssetImage('assets/images/google-plus.png'),
+                    Text(
+                      "chromicle",
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                     ),
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.transparent,
-                      backgroundImage: AssetImage('assets/images/facebook.png'),
+                    Text(
+                      "@fmFOSS",
+                      style: TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
                     ),
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.transparent,
-                      backgroundImage:
-                          AssetImage('assets/images/instagram.png'),
-                    ),
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.transparent,
-                      backgroundImage: AssetImage('assets/images/linkedin.png'),
+                    Text(
+                      "Mobile App Developer and Open Source enthusiastic ",
+                      softWrap: true,
+                      style: TextStyle(fontSize: 25, color: Colors.black87),
                     ),
                   ],
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 1, color: Colors.deepPurple.shade600),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
-                      Text(
-                        "chromicle",
-                        style: TextStyle(
-                            fontSize: 40, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        "@fmFOSS",
-                        style:
-                            TextStyle(fontSize: 20, fontFamily: 'Montserrat'),
-                      ),
-                      Text(
-                        "Mobile App Developer and Open Source enthusiastic ",
-                        softWrap: true,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                    ],
-                  ),
-                )
+                NavigationContainer(map: _icons[0]),
+                NavigationContainer(map: _icons[1]),
+                NavigationContainer(map: _icons[2]),
+                NavigationContainer(map: _icons[3]),
               ]),
         ),
       ),
     );
   }
 }
+
+// create acustom widget that take some argument to modify as we need
+List<Map<String, dynamic>> _icons = [
+  {'text': 'Privacy', 'icon': Icons.privacy_tip_outlined},
+  {'text': 'Purchase History', 'icon': Icons.history_sharp},
+  {'text': 'Help & Support', 'icon': Icons.help_outline},
+  {'text': 'Settings', 'iocn': Icons.settings_sharp}
+];
