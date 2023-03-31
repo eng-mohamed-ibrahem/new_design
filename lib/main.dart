@@ -73,5 +73,5 @@ List<Map<String, dynamic>> _icons = [
   {'text': 'Privacy', 'icon': Icons.privacy_tip_outlined},
   {'text': 'Purchase History', 'icon': Icons.history_sharp},
   {'text': 'Help & Support', 'icon': Icons.help_outline},
-  {'text': 'Settings', 'iocn': Icons.settings_sharp}
+  {'text': 'Settings', 'icon': Icons.settings_sharp}
 ];
