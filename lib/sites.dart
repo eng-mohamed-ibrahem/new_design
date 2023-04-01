@@ -8,29 +8,29 @@ class Sites extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
-        CircleAvatar(
-          radius: 30,
+      children:  [
+          CircleAvatar(
+          radius: 35,
           backgroundColor: Colors.transparent,
-          child: Icon(FontAwesomeIcons.googlePlus),
+          child: FaIcon(FontAwesomeIcons.googlePlus, color: Colors.blue.shade900, size: 30,),
           // backgroundImage: AssetImage('assets/images/google-plus.png'),
         ),
         CircleAvatar(
-          radius: 30,
+          radius: 35,
           backgroundColor: Colors.transparent,
-          child: Icon(FontAwesomeIcons.facebookF),
+          child: FaIcon(FontAwesomeIcons.facebookF, color: Colors.blue.shade900, size: 30,),
           // backgroundImage: AssetImage('assets/images/facebook.png'),
         ),
-        CircleAvatar(
-          radius: 30,
+         CircleAvatar(
+          radius: 35,
           backgroundColor: Colors.transparent,
-          child: Icon(FontAwesomeIcons.instagram),
+          child: FaIcon(FontAwesomeIcons.instagram, color: Colors.blue.shade900, size: 30,),
           // backgroundImage: AssetImage('assets/images/instagram.png'),
         ),
-        CircleAvatar(
-          radius: 30,
+         CircleAvatar(
+          radius: 35,
           backgroundColor: Colors.transparent,
-          child: Icon(FontAwesomeIcons.linkedin),
+          child: FaIcon(FontAwesomeIcons.linkedin, color: Colors.blue.shade900, size: 30,),
           // backgroundImage: AssetImage('assets/images/linkedin.png'),
         ),
       ],
